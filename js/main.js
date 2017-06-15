@@ -78,7 +78,7 @@ var obtenerInfoTema = function (){
 		var creacion = responseTopic.created_at;
 		var respuesta = responseTopic.content;
 		mostrarInfoTema(url, autor, tema);
-console.log(respuesta);
+console.log(responseTopic);
 	})
 };
 
