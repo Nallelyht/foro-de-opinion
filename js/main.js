@@ -22,8 +22,9 @@ var cargarTopics = function (){
 };
 
 var crearTopics = function (topic){
-	var respuestas = topic.responses_count;
+	
 	var autor = topic.author_name;
+	var respuestas = topic.responses_count;
 	var id = topic.id;
 	var topic = topic.content;
 
@@ -38,6 +39,11 @@ var agregarTopic = function (e) {
 	//console.log("todo va bn")
 	var nuevoAutor =$("#author-name").val();
 	var nuevoTema = $("#new-topic").val();
-	console.log(nuevoAutor);
+	$.post(apiTopics.url, {
+    "author_name": nuevoAutor,
+    "content": nuevoTema,
+}, function (topic){
+		crearTopics(topic);
+	});
 };
 $(document).ready(cargarPagina);
