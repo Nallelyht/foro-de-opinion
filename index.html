@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheet" href="css/materialize.min.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="css/sweetalert.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<title>Foro de opinión</title>
@@ -12,8 +13,17 @@
 	<body>
 		<h1 class="center-align">Foro de opinión</h1>
 		<section class="container">
-			<a class="waves-effect waves-light btn right grey darken-4" href="#modal1">+ Agregar Tema</a>
-			<table class="striped bordered responsive-table">
+			<a class="waves-effect waves-light btn left grey darken-2" href="#modal1">+ Agregar Tema</a>
+			<form id="search-form" >
+				<div class="input-field right">
+					<input id="search" type="search" placeholder="Buscar Tema" required>
+					<label class="label-icon" for="search"><i class="material-icons">search</i>
+					</label>
+					<button type="submit" class=" waves-effect waves-green btn-flat right">Buscar</button>
+					<i class="material-icons left">close</i>
+				</div>
+			</form>
+			<table class="striped bordered responsive-table">				
 				<thead>
 					<tr>
 						<th>Tema</th>
